@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+header, main, section, article, nav, footer{
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+article{
+    background:lightgray;
+}
+
+article header{
+    background: lightsalmon;
+    color: goldenrod;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: stretch;
+}
+
+section>article{
+    flex: 1 1 200px;
+}
+
+section>article:nth-child(1){
+    background: lightsteelblue;
+    order: 5;
+}
+
+section>article:nth-child(6){
+    background: lightpink;
+    order: 16;
+}
+
+/* M E N U */
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+nav ul{
+    list-style-type:none ;
+    padding: 0px;
+}
+
+#listaval #menu{
+    display: flex;
+}
+
+#listaval{
+    display: flex;
+}
+
+@media screen and (max-width:600px){
+    section{
+        flex-direction: column;
+    }
+}
